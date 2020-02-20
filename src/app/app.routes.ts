@@ -12,11 +12,18 @@ const routes: Routes = [
   {
     path: 'post-details',
     loadChildren: () => PostDetailsPageModule
-  }
+  },
+  { path: '**', redirectTo: '/404' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes),
+    PostsPageModule,
+    PostDetailsPageModule
+  ],
+  exports: [RouterModule,
+    PostsPageModule,
+    PostDetailsPageModule
+  ]
 })
 export class RoutesModule { }
