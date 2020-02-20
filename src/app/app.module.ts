@@ -11,6 +11,7 @@ import { PostDetailsPageComponent } from './pages/post-details-page/post-details
     AppComponent,
     PostsPageComponent,
     PostDetailsPageComponent,
+    
   ],
   imports: [
     BrowserModule,
