@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
+import { PostsListComponent } from '../../components/posts-list/posts-list.component';
+
 const routes: Routes = [
     {
-      path: 'wishlist',
+      path: 'user-posts',
       component: PostsListComponent,
     }
   ];

@@ -10,7 +10,7 @@ import { PostDetailsPageComponent } from './pages/post-details-page/post-details
   declarations: [
     AppComponent,
     PostsPageComponent,
-    PostDetailsPageComponent
+    PostDetailsPageComponent,
   ],
   imports: [
     BrowserModule,
