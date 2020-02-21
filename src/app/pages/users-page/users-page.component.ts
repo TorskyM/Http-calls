@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators'
+
+import { HttpService } from '../../shared/services/http.service';
+import { User } from '../../interfaces/user.interface';
+
 @Component({
   selector: 'app-users-page',
   templateUrl: './users-page.html',
@@ -7,9 +13,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly httpService: HttpService ) { }
 
-  ngOnInit(): void {
+  public users$: Observable<Array<User>>;
+  
+  public ngOnInit(): void {
+    this.users$ = this.httpService.getUsers();
   }
-
 }
