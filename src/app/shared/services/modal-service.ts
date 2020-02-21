@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class ModalService {
 
   public isModalOpened = false;
+  public modalTypeAdd = true;
 
   public open(): void {
     this.isModalOpened = true;    

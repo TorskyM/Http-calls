@@ -14,7 +14,7 @@ import { ModalService } from '../modal-service';
 
 export class ModalComponent implements OnInit, OnDestroy {
   constructor(
-    private readonly modalService: ModalService,
+    public modalService: ModalService,
     private readonly el: ElementRef,
     private readonly renderer: Renderer2
   ) { }

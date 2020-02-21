@@ -1,1 +1,10 @@
-<p>post-details-page works!</p>
+<app-post [post]="post$ | async"></app-post>
+<app-comment 
+  *ngFor="let comment of comments$ | async" 
+  [comment]="comment">
+</app-comment>
+<app-modal-window
+  *ngIf="this.modalService.isModalOpened">
+</app-modal-window>
+<button (click)="onPostEdit()">Edit</button>
+<button (click)="onPostDelete()">Delete</button>

@@ -17,6 +17,7 @@ export class HttpService implements OnDestroy {
 
   public postSub: Subscription;
   public putSub: Subscription;
+  public deleteSub: Subscription;
 
   public getUsers(): Observable<any> {
     return this.http.get(URLs.users);
@@ -26,8 +27,12 @@ export class HttpService implements OnDestroy {
     return this.http.get<Post>(`${URLs.userPosts}${userId}`);
   }
 
-  public getPostById(postId: string): Observable<Post> {
-    return this.http.get<Post>(`${URLs.postDetails}${postId}`);
+  public getPost(userId: string): Observable<Post> {
+    return this.http.get<Post>(`${URLs.posts}/${userId}`);
+  }
+
+  public getPostComments(postId: string): Observable<Array<Post>> {
+    return this.http.get<Array<Post>>(`${URLs.postComments}${postId}`);
   }
 
   public createPost(post: Post) {
@@ -35,8 +40,12 @@ export class HttpService implements OnDestroy {
   }
 
   public changePost(postId: number, post: Post){
-  this.putSub = this.http.put(`${URLs.postDetails}${postId}`, post)
+  this.putSub = this.http.put(`${URLs.posts}${postId}`, post)
   .subscribe(res => console.log(res, 'success'), err => console.log(err, 'error'));
+  }
+
+  public deletePost(postId: number): void {
+    this.deleteSub = this.http.delete(`${URLs.posts}/${postId}`).subscribe(res => console.log(res, 'success'), err => console.log(err, 'error'));
   }
 
   public ngOnDestroy(): void { }

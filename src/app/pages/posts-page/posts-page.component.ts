@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
-import { HttpService } from 'src/app/shared/services/http.service';
 import { Post } from 'src/app/interfaces/post.interface';
 import { ModalService } from 'src/app/shared/services/modal-service';
 
@@ -15,9 +13,10 @@ import { ModalService } from 'src/app/shared/services/modal-service';
 })
 export class PostsPageComponent implements OnInit {
 
-  constructor(private readonly route: ActivatedRoute, public modalService: ModalService,) {
-    
-   }
+  constructor(
+    private readonly route: ActivatedRoute,
+    public readonly modalService: ModalService
+  ) { }
 
   public posts$: Observable<Post>;
 
@@ -33,6 +32,7 @@ export class PostsPageComponent implements OnInit {
   }
 
   public openModal(): void {
+    this.modalService.modalTypeAdd = true;
     this.modalService.open();
   }
 }
