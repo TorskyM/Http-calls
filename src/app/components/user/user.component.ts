@@ -13,7 +13,9 @@ export class UserComponent implements OnInit {
 
   @Input() public user: User;
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    console.log(this.user);
+    
   }
 
 }

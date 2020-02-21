@@ -3,18 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { RoutesModule } from './app.routes';
 import { AppComponent } from './app.component';
-import { PostsPageComponent } from './pages/posts-page/posts-page.component';
 import { PostDetailsPageComponent } from './pages/post-details-page/post-details-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsPageComponent,
     PostDetailsPageComponent,
-    
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RoutesModule
   ],
   providers: [],

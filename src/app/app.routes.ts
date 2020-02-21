@@ -12,11 +12,11 @@ const routes: Routes = [
     loadChildren: () => UsersPageModule
   },
   {
-    path: 'user-posts',
+    path: 'user-posts/:id',
     loadChildren: () => PostsPageModule
   },
   {
-    path: 'post-details',
+    path: 'post-details/:id',
     loadChildren: () => PostDetailsPageModule
   },
 ];

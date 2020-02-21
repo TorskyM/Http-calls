@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
+import { SharedModule } from '../../shared/services/shared.module';
+
 import { UsersPageComponent } from '../../pages/users-page/users-page.component';
 
 const routes: Routes = [
@@ -17,6 +19,7 @@ const routes: Routes = [
     ],
     imports: [
       CommonModule,
+      SharedModule,
       RouterModule.forChild(routes)
     ],
     exports: [
