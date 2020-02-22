@@ -3,28 +3,22 @@ import { Action } from '@ngrx/store';
 import { Post } from 'src/app/interfaces/post.interface';
 
 export enum PostActionType {
-    AddPost = '[Post] Add post',
-    RemovePost = '[Post] Remove post',
-    ChagePost = '[Post] Chage post'
+    SetPost = '[Post] Set post',
+    GetPost = '[Post] Get post',
 }
 
-export class AddPost implements Action {
+export class SetPost implements Action {
     constructor(public readonly payload: Post) { }
 
-    public static readonly TYPE = PostActionType.AddPost;
-    public type = AddPost.TYPE;
+    public static readonly TYPE = PostActionType.SetPost;
+    public type = SetPost.TYPE;
 }
 
-export class RemovePost implements Action {
-    constructor(public readonly payload: Post) { }
+export class GetPost implements Action {
+    constructor(public readonly payload = null) { }
 
-    public static readonly TYPE = PostActionType.RemovePost;
-    public type = RemovePost.TYPE;
+    public static readonly TYPE = PostActionType.GetPost;
+    public type = GetPost.TYPE;
 }
 
-export class ChagePost implements Action {
-    constructor(public readonly payload: Post) { }
-
-    public static readonly TYPE = PostActionType.ChagePost;
-    public type = ChagePost.TYPE;
-}
+export type PostActions = SetPost | GetPost;

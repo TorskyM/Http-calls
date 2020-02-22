@@ -1,4 +1,8 @@
-
-<button><a routerLink="/user-posts/{{ user.id }}">Posts</a></button>
-<p>{{ user.id }}</p>
-<h4>{{ user.name }}</h4>
+<div class="content-wrapper">
+  <div class="user">
+    <div class="user__details">
+			<h4 class="user__name">{{ user.name }}</h4>
+			<button class="button_default" routerLink="/user-posts/{{ user.id }}">Posts</button>
+    </div>
+  </div>
+</div>

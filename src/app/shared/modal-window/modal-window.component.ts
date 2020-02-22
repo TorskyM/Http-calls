@@ -3,7 +3,7 @@ import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
 import { fromEvent, Subscription } from 'rxjs';
 
-import { ModalService } from '../modal-service';
+import { ModalService } from '../services/modal-service';
 
 @AutoUnsubscribe()
 @Component({

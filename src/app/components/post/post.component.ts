@@ -9,7 +9,12 @@ import { Post } from 'src/app/interfaces/post.interface';
 })
 export class PostComponent {
 
-  @Input() public post: Post;
+  @Input() public post: Post = {
+    userId: null,
+    id: null,
+    title: '',
+    body: ''
+  };
 
   public onSelectPost(){
     

@@ -1,4 +1,12 @@
-<p>{{ post.userId }}, {{ post.id }}</p>
-<h4>{{ post.title }}</h4>
-<h5>{{ post.body }}</h5>
-<button><a (click)="onSelectPost()" routerLink="/post-details/{{ post.id }}">Checkout</a></button>
+<div class="content-wrapper">
+  <div class="post">
+    <div class="post__details">
+        <h4 class="post__name">Post #{{ post.id }}</h4>
+        <p class="post__data">{{ post.title }}</p>
+        <p class="post__message">{{ post.body }}</p>
+        <button class="button_default" routerLink="/post-details/{{ post.id }}" (click)="onSelectPost()">
+          Checkout
+        </button>
+    </div>
+  </div>
+</div>

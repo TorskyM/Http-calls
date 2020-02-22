@@ -35,17 +35,16 @@ export class HttpService implements OnDestroy {
     return this.http.get<Array<Post>>(`${URLs.postComments}${postId}`);
   }
 
-  public createPost(post: Post) {
+  public createPost(post: Post): void {
    this.postSub = this.http.post(URLs.posts, { title: post.title, body: post.body }).subscribe();
   }
 
-  public changePost(postId: number, post: Post){
-  this.putSub = this.http.put(`${URLs.posts}${postId}`, post)
-  .subscribe(res => console.log(res, 'success'), err => console.log(err, 'error'));
+  public changePost(post: Post): void{
+  this.putSub = this.http.put(`${URLs.posts}/${post.id}`, post).subscribe();
   }
 
   public deletePost(postId: number): void {
-    this.deleteSub = this.http.delete(`${URLs.posts}/${postId}`).subscribe(res => console.log(res, 'success'), err => console.log(err, 'error'));
+    this.deleteSub = this.http.delete<void>(`${URLs.posts}/${postId}`).subscribe();
   }
 
   public ngOnDestroy(): void { }
