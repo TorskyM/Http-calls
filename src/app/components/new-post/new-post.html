@@ -1,0 +1,65 @@
+<div class="new-post">
+    <div class="new-post__wrapper">
+      <div class="new-post__container">
+      </div>
+      <form class="new-post__form">
+        <div class="new-post__field">
+          <label
+            for="id"
+            class="new-post__label">
+            User ID
+          </label>
+          <input
+            name="text"
+            type="text"
+            required
+            class="new-post__input"
+            placeholder="Please enter user ID"
+            [class.error]="!post.userId"
+            [(ngModel)]="post.userId">
+        </div>
+        <div class="new-post__field">
+          <label
+            for="title"
+            class="new-post__label">
+            Title
+          </label>
+          <input
+            name="title"
+            type="title"
+            required
+            class="new-post__input"
+            placeholder="Please enter your title"
+            [class.error]="!post.title"
+            [(ngModel)]="post.title">
+        </div>
+        <div class="new-post__field">
+            <label
+              for="text"
+              class="new-post__label">
+              Post text
+            </label>
+            <textarea
+              name="title"
+              type="title"
+              required
+              class="new-post__input new-post__text"
+              placeholder="Please enter your text here"
+              [class.error]="!post.body"
+              [(ngModel)]="post.body"></textarea>
+          </div>
+      </form>
+      <div class="modal-button__container">
+          <button
+            class="modal-button__container__btn"
+            (click)="onSubmit()">
+            Submit
+          </button>
+          <button
+            class="modal-button__container__btn"
+            (click)="closeModal()">
+            Cancel
+          </button>
+      </div>
+    </div>
+  </div>

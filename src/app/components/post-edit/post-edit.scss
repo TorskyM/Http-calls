@@ -1,0 +1,98 @@
+@import 'src/app/styles/variables';
+
+.edit-post {
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 75%;
+    height: 300px;
+    color: $fontColorDark;
+  }
+
+  &__title {
+    margin: 0 auto;
+    font-family: $mainFontBold;
+    font-size: 1.8rem;
+  }
+
+  &__error {
+    margin: 10px auto;
+    padding: 5px 10px;
+    width: 70%;
+    background-color: $errorColor;
+    text-align: center;
+    font-family: $mainFontRegular;
+    font-size: 1.2rem;
+    color: $fontColorLight;
+  }
+
+  &__form {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  &__field {
+    display: flex;
+		flex-direction: column;
+		margin: 5px;
+  }
+
+  &__label {
+    font-size: 1.3rem;
+    font-family: $mainFontRegular;
+  }
+
+  &__input {
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    padding: 5px;
+    outline: none
+	}
+
+	&__text {
+		font-size: 1.1rem;
+	}
+
+  &__container {
+    display: flex;
+  }
+
+  &__login {
+
+    .login__container {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  .login__container {
+    border: 1px solid black;
+    border-bottom: none;
+  }
+
+  button {
+    border: none;
+  }
+}
+
+.modal-button {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+
+    &__btn {
+      border: 1px solid black;
+			width: 100px;
+			height: 50px;
+			background-color: orange;
+			color: black;
+    }
+  }
+}
+
+.error {
+  border: 1px solid $inputWarningColor;
+  border-radius: 2px;
+  box-shadow: 0 0 1px 1px $inputWarningColor;
+}

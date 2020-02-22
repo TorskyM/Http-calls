@@ -1,0 +1,12 @@
+<div class="post_detail">
+  <app-post [post]="post">
+  </app-post>
+  <app-modal-window *ngIf="this.modalService.isModalOpened">
+  </app-modal-window>
+  <div class="post_detail__edit">
+    <button class="button_default" (click)="onPostEdit()">Edit</button>
+    <button class="button_default" (click)="onPostDelete()">Delete</button>
+  </div>
+</div>
+<app-comment *ngFor="let comment of comments$ | async" [comment]="comment">
+</app-comment>
