@@ -1,3 +1,5 @@
+@import '../../styles//variables';
+
 .modal-window {
   position: fixed;
   top: 0;
@@ -13,7 +15,7 @@
   &__body {
     margin: 0 auto;
     padding: 20px;
-    background: #fff;
+    background: $fontColorLight;
     width: 60%;
   }
 
@@ -23,7 +25,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #000;
+    background-color: $bgColorDark;
     opacity: 0.75;
     z-index: 9;
   }

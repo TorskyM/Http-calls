@@ -1,7 +1,7 @@
 @import 'src/app/styles/variables';
 
 .edit-post {
-  &__wrapper { 
+  &__wrapper {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -21,7 +21,7 @@
     margin: 10px auto;
     padding: 5px 10px;
     width: 70%;
-    background-color: $saleTagColor;
+    background-color: $errorColor;
     text-align: center;
     font-family: $mainFontRegular;
     font-size: 1.2rem;
@@ -46,11 +46,11 @@
 
   &__input {
     margin: 5px 0;
-    border: 2px solid #ccc; 
-    padding: 5px; 
+    border: 2px solid #ccc;
+    padding: 5px;
     outline: none
 	}
-	
+
 	&__text {
 		font-size: 1.1rem;
 	}
