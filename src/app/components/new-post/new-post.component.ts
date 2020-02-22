@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Post } from 'src/app/interfaces/post.interface';
 import { ModalService } from '../../shared/services/modal-service';
@@ -10,7 +10,7 @@ import { HttpService } from 'src/app/shared/services/http.service';
   styleUrls: ['./new-post.scss']
 })
 
-export class NewPostComponent implements OnInit {
+export class NewPostComponent {
 
   constructor(
     private readonly modalService: ModalService,
@@ -23,21 +23,6 @@ export class NewPostComponent implements OnInit {
     title: '',
     body: ''
   };
-
-  public ngOnInit(): void {
-  }
-
-  // public onSubmit(): void {
-  //   if (this.isEmailValid && this.isPasswordValid && this.user.password) {
-  //     const payload = {
-  //       email: this.user.email,
-  //       password: this.user.password
-  //   };
-  //     this.isLoginOpen ?
-  //       this.store.dispatch(new LogIn(payload)) :
-  //       this.store.dispatch(new SignUp(payload));
-  //   }
-  // }
 
   public onSubmit(): void {
     if(this.post.userId && this.post.title && this.post.body){

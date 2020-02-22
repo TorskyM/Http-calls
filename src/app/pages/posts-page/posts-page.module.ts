@@ -33,4 +33,4 @@ const routes: Routes = [
     ]
   })
 
-  export class PostsPageModule { }
+export class PostsPageModule { }

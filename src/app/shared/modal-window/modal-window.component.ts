@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, OnDestroy, Renderer2 } from '@angular/core';
+import {Component, ElementRef,
+  OnInit, OnDestroy, Renderer2} from '@angular/core';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
 import { fromEvent, Subscription } from 'rxjs';

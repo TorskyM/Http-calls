@@ -39,7 +39,7 @@ export class PostDetailsPageComponent implements OnInit, OnDestroy {
   public ngOnInit(): void {
     this.routerSub = this.route.params.subscribe(value => {
       this.postId = value.id;
-      
+
       this.comments$ = this.httpService.getPostComments(this.postId);
     });
     this.postSub = this.httpService.getPost(this.postId).subscribe(data => {

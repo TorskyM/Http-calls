@@ -7,7 +7,7 @@ import { SharedModule } from '../../shared/services/shared.module';
 
 const routes: Routes = [
     {
-      path: 'post-details/:id',
+      path: 'post/:id',
       component: PostDetailsPageComponent,
     }
   ];

@@ -4,7 +4,7 @@
         <h4 class="post__name">Post #{{ post.id }}</h4>
         <p class="post__data">{{ post.title }}</p>
         <p class="post__message">{{ post.body }}</p>
-        <button class="button_default" routerLink="/post-details/{{ post.id }}" (click)="onSelectPost()">
+        <button class="button_default" routerLink="/post/{{ post.id }}">
           Checkout
         </button>
     </div>

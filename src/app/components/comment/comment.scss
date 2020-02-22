@@ -1,24 +1,5 @@
 @import '../../styles//variables';
 
-.button {
-  &_default {
-    margin-top: 15px;
-    border: 2px solid $accentColor;
-    width: 150px;
-    height: 35px;
-    background-color: transparent;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-  }
-
-  &:hover {
-    background: $accentColor;
-    transform: scale(1.08);
-    transition: 0.1s ease-in-out;
-    color: $fontColorLight;
-  }
-}
-
 .content-wrapper {
   margin: 0 20%;
 }
@@ -48,8 +29,8 @@
   }
 
   &__details {
-		display: flex;
-		flex-direction: column;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     padding: 15px 0;
     border-bottom: 1px solid $accentColor;
@@ -60,19 +41,19 @@
   &__details {
     display: flex;
     justify-content: space-around;
-		align-items: flex-start;
-		box-shadow: 0 0 11px $shadowMedium;
-		padding: 10px;
-		background-color: $bgColorMedium;
-	}
-	
-	&__data {
-		font-family: $mainFontBold;
-	}
+    align-items: flex-start;
+    box-shadow: 0 0 11px $shadowMedium;
+    padding: 10px;
+    background-color: $bgColorMedium;
+  }
 
-	&__message {
-		font-family: $mainFontRegular;
-	}
+  &__data {
+    font-family: $mainFontBold;
+  }
+
+  &__message {
+    font-family: $mainFontRegular;
+  }
 
   &__name {
     width: 210px;

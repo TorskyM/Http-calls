@@ -42,7 +42,7 @@ export class PostEditComponent implements OnInit, OnDestroy {
       this.httpService.changePost(this.post);
 
       this.closeModal();
-    } 
+    }
   }
 
   public closeModal(): void {

@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => PostsPageModule
   },
   {
-    path: 'post-details/:id',
+    path: 'post/:id',
     loadChildren: () => PostDetailsPageModule
   },
 ];

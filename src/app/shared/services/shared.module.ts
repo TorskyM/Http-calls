@@ -7,7 +7,6 @@ import { UserComponent } from '../../components/user/user.component';
 import { PostComponent } from '../../components/post/post.component';
 import { NewPostComponent } from '../../components/new-post/new-post.component';
 import { ModalComponent } from '../modal-window/modal-window.component';
-import { PostDetailsComponent } from '../../components/post-details/post-details.component';
 import { CommentComponent } from '../../components/comment/comment.component';
 import { PostEditComponent } from '../../components/post-edit/post-edit.component';
 
@@ -17,7 +16,6 @@ import { PostEditComponent } from '../../components/post-edit/post-edit.componen
       PostComponent,
       NewPostComponent,
       ModalComponent,
-      PostDetailsComponent,
       CommentComponent,
       PostEditComponent
     ],
@@ -33,7 +31,6 @@ import { PostEditComponent } from '../../components/post-edit/post-edit.componen
       NewPostComponent,
       ModalComponent,
       FormsModule,
-      PostDetailsComponent,
       CommentComponent,
       PostEditComponent
     ]

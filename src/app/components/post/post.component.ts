@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Post } from 'src/app/interfaces/post.interface';
 
@@ -15,8 +15,4 @@ export class PostComponent {
     title: '',
     body: ''
   };
-
-  public onSelectPost(){
-    
-  }
 }
