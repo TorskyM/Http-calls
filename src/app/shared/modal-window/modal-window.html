@@ -1,0 +1,7 @@
+<div class="modal-window">
+  <div class="modal-window__body">
+    <app-new-post *ngIf="modalService.modalTypeAdd"></app-new-post>
+    <app-post-edit *ngIf="!modalService.modalTypeAdd"></app-post-edit>
+  </div>
+</div>
+<div class="modal-window__background"></div>

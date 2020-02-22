@@ -3,7 +3,7 @@ import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
 import { fromEvent, Subscription } from 'rxjs';
 
-import { ModalService } from '../modal-service';
+import { ModalService } from '../services/modal-service';
 
 @AutoUnsubscribe()
 @Component({
@@ -14,7 +14,7 @@ import { ModalService } from '../modal-service';
 
 export class ModalComponent implements OnInit, OnDestroy {
   constructor(
-    private readonly modalService: ModalService,
+    public modalService: ModalService,
     private readonly el: ElementRef,
     private readonly renderer: Renderer2
   ) { }

@@ -1,0 +1,51 @@
+<div class="edit-post">
+    <div class="edit-post__wrapper">
+      <div class="edit-post__container">
+      </div>
+      <form class="edit-post__form">
+        <div class="edit-post__field">
+          <label 
+            for="title"
+            class="edit-post__label">
+            Title
+          </label>
+          <input
+            name="title"
+            type="title"
+            required
+            class="edit-post__input"
+            placeholder="Please enter your title"
+            [class.error]="!post.title"
+            [(ngModel)]="post.title">
+        </div>
+        <div class="edit-post__field">
+            <label 
+              for="text"
+              class="edit-post__label">
+              Post text
+            </label>
+            <textarea
+              name="title"
+              type="title"
+              required
+              class="edit-post__input edit-post__text"
+              placeholder="Please enter your text here"
+              [class.error]="!post.body"
+              [(ngModel)]="post.body"></textarea>
+          </div>
+      </form>
+      <div class="modal-button__container">
+          <button 
+            class="modal-button__container__btn"
+            (click)="onSubmit()">
+            Submit
+          </button>
+          <button 
+            class="modal-button__container__btn"
+            (click)="closeModal()">
+            Cancel
+          </button>
+      </div>
+    </div>
+  </div>
+  
